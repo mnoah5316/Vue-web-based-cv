@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css'); 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ul,
+li,
+span {
+  line-height: 1.6;
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  &.soli {
+    &::first-letter {
+      font-size: 110%; // font-family: sans-serif;
+      font-weight: 400;
+    }
+  }
+}

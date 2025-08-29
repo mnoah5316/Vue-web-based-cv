@@ -1,0 +1,96 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10pt;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    display: grid;
+    grid-template-areas:
+    "head head"
+    "about contact"
+    "experience contact"
+    "experience skill";
+    grid-template-columns: 1fr 18rem;
+    #head {
+      grid-area: head; 
+    }
+    #contact {
+      grid-area: contact;
+    }
+    #about {
+      grid-area: about;
+    }
+    #skill {
+      grid-area: skill;
+    }
+    #experience {
+      grid-area: experience;
+    }
+    #project {
+      grid-area: project;
+    }
+  }
+  .card {
+    border-radius: $card-radius;
+    background: $white;
+    box-shadow: $card-shadow;
+    padding: inherit;
+    margin: 10pt;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-weight: 500;
+    }
+    p {
+      margin-top: 5pt;
+      font-size: 11pt;
+      color: $content;
+      &.tag {
+        font-weight: 500;
+        font-size: 9pt;
+        display: inline-block;
+        color: $white;
+        border-radius: 1rem;
+        padding: 0 5pt;
+        margin-top: 10pt;
+        background: $tone-gradient;
+      }
+    }
+    &.card-head {
+      flex-direction: row;
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 30pt;
+      .image {
+        background-position: center;
+        background-size: cover;
+        height: 80pt;
+        width: 80pt;
+        border-radius: 50%;
+        display: inline-flex;
+        box-shadow: $card-shadow;
+        position: absolute;
+        left: 10pt;
+        top: -30pt;
+      }
+      .content {
+        width: calc(100% - 90pt);
+        display: inline-flex;
+        flex-direction: column;
+        margin-left: auto;
+        h1 {
+          font-weight: 500;
+          line-height: 1 !important;
+          @media screen and (max-width: 320px) {
+            font-size: 22pt;
+          }
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

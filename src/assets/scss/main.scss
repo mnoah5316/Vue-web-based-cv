@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'color';
+@import 'variable';
+@import 'font';
+
+@import 'card';
+@import 'icon';
+@import 'skill';
+@import 'footer';
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
